@@ -19,7 +19,7 @@ jobs:
         run: pip install Bandit
 
       - name: Run Bandit Scan
-        run: bandit -r .
+        run: bandit -ll -ii -r .
         
         
 
