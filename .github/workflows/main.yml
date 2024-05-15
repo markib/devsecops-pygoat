@@ -20,7 +20,12 @@ jobs:
 
       - name: Run Bandit Scan
         run: bandit -ll -ii -r . -f josn -o bandit-report.json
-        
+
+      - name: Upload Artifact
+        uses: action/upload-artifact@v3
+        with:
+          name: bandit finding
+          path: bandit-report.json
         
 
     
